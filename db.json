@@ -71,6 +71,14 @@
       "description": "Robot vacuum cleaner with smart navigation and powerful suction.",
       "image": "https://images.pexels.com/photos/9789940/pexels-photo-9789940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "category": "Home Appliances"
+    },
+    {
+      "id": "11",
+      "title": "Rerum officia iure sri",
+      "price": 278,
+      "category": "Mollitia",
+      "description": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi. Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+      "image": "https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
 }
