@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditProduct = () => {
     const data = useLoaderData();
@@ -18,13 +19,29 @@ const EditProduct = () => {
         const image = form.image.value;
         const pData = { id, title, price, category, description, image };
 
-        const postData = await axios.patch(`http://localhost:3000/products/${data?.id}`, pData);
 
-        if (postData.status === 200) {
-            navigate("/dashboard/manage");
-        }
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, update it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                const postData = await axios.patch(`http://localhost:3000/products/${data?.id}`, pData);
 
-        console.log(postData);
+                if (postData.status === 200) {
+                    Swal.fire({
+                        title: "Updated!",
+                        text: "Your file has been updated.",
+                        icon: "success"
+                    });
+                    navigate("/dashboard/manage");
+                }
+            }
+        });
     }
 
     return (

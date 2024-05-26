@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
 
@@ -14,9 +15,34 @@ const AddProduct = () => {
         const image = form.image.value;
         const pData = { id, title, price, category, description, image };
 
-        const postData = await axios.post("http://localhost:3000/products", pData);
 
-        console.log(postData);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, added it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    await axios.post("http://localhost:3000/products", pData);
+                    Swal.fire({
+                        title: "Added Product",
+                        text: "Your product has been Added.",
+                        icon: "success"
+                    });
+
+                } catch (error) {
+                    Swal.fire({
+                        title: "Error!",
+                        text: "There was a problem add new product!",
+                        icon: "error"
+                    });
+                }
+            }
+        });
     }
     return (
         <>
