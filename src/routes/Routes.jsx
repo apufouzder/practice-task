@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layouts/DashboardLayout";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import ManageAllProduct from "../pages/Dashboard/ManageAllProduct";
+import ProductDetails from "../components/Dashboard/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,12 @@ const router = createBrowserRouter([
       },
       {
         path: "manage",
-        element: <PrivateRoute><ManageAllProduct /></PrivateRoute>
+        element: <PrivateRoute><ManageAllProduct /></PrivateRoute>,
+      },
+      {
+        path: "manage/:id",
+        element: <PrivateRoute><ProductDetails /></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
       }
     ]
   }
