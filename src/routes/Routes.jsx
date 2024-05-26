@@ -10,6 +10,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import ManageAllProduct from "../pages/Dashboard/ManageAllProduct";
 import ProductDetails from "../components/Dashboard/ProductDetails";
+import EditProduct from "../pages/Dashboard/EditProduct";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
       {
         path: "manage/:id",
         element: <PrivateRoute><ProductDetails /></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+      },
+      {
+        path: "edit/:id",
+        element: <PrivateRoute><EditProduct /></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
       }
     ]

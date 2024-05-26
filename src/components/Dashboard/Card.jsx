@@ -27,7 +27,7 @@ const Card = ({ product, onDelete }) => {
                     </div>
                     <div className="card-actions justify-around">
                         <Link to={`/dashboard/manage/${id}`}><button className="btn btn-success">View</button></Link>
-                        <button className="btn btn-info">Edit</button>
+                        <Link to={`/dashboard/edit/${id}`}><button className="btn btn-info">Edit</button></Link>
                         <button onClick={handleDelete} className="btn btn-error">Delete</button>
                     </div>
                 </div>
