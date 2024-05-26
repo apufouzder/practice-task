@@ -5,8 +5,10 @@ import Login from "../pages/Login/Login";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import SignUp from "../pages/SignUp/SignUp";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import DashboardLayout from "../layouts/DashboardLayout";
+import AddProduct from "../pages/Dashboard/AddProduct";
+import ManageAllProduct from "../pages/Dashboard/ManageAllProduct";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
+        loader: () => fetch('http://localhost:3000/products')
       },
       {
         path: "/about",
@@ -30,12 +33,26 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp />
       },
-      {
-        path: "/dashboard",
-        element: <PrivateRoute><Dashboard /></PrivateRoute>
-      }
+      // {
+      //   path: "/dashboard",
+      //   element: <PrivateRoute><Dashboard /></PrivateRoute>
+      // }
     ],
   },
+  {
+    path: "/dashboard",
+    element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+    children: [
+      {
+        path: "addProduct",
+        element: <PrivateRoute><AddProduct /></PrivateRoute>
+      },
+      {
+        path: "manage",
+        element: <PrivateRoute><ManageAllProduct /></PrivateRoute>
+      }
+    ]
+  }
 ]);
 
 export default router;

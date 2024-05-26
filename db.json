@@ -1,0 +1,84 @@
+{
+    "products": [
+        {
+          "id": "1",
+          "title": "Wireless Bluetooth Headphones",
+          "price": 59.99,
+          "description": "High-quality wireless Bluetooth headphones with noise-cancellation.",
+          "image": "https://images.pexels.com/photos/15840650/pexels-photo-15840650/free-photo-of-black-wireless-headphones.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Electronics"
+        },
+        {
+          "id": "2",
+          "title": "Smart Watch",
+          "price": 199.99,
+          "description": "Smart watch with heart rate monitor, GPS, and waterproof design.",
+          "image": "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Wearables"
+        },
+        {
+          "id": "3",
+          "title": "Gaming Laptop",
+          "price": 1299.99,
+          "description": "High-performance gaming laptop with 16GB RAM and 1TB SSD.",
+          "image": "https://images.pexels.com/photos/682933/pexels-photo-682933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Computers"
+        },
+        {
+          "id": "4",
+          "title": "Electric Toothbrush",
+          "price": 49.99,
+          "description": "Rechargeable electric toothbrush with multiple brushing modes.",
+          "image": "https://images.pexels.com/photos/4009768/pexels-photo-4009768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Health & Personal Care"
+        },
+        {
+          "id": "5",
+          "title": "4K Ultra HD TV",
+          "price": 799.99,
+          "description": "65-inch 4K Ultra HD TV with HDR and smart TV features.",
+          "image": "https://images.pexels.com/photos/12040377/pexels-photo-12040377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Home Entertainment"
+        },
+        {
+          "id": "6",
+          "title": "Air Purifier",
+          "price": 149.99,
+          "description": "HEPA air purifier with three-stage filtration and quiet operation.",
+          "image": "https://images.pexels.com/photos/10127241/pexels-photo-10127241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Home Appliances"
+        },
+        {
+          "id": "7",
+          "title": "Fitness Tracker",
+          "price": 89.99,
+          "description": "Fitness tracker with heart rate monitor, sleep tracking, and waterproof design.",
+          "image": "https://images.pexels.com/photos/17130096/pexels-photo-17130096/free-photo-of-car-air-purifier-in-the-storage-compartment-in-the-center-console-of-a-mercedes.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Wearables"
+        },
+        {
+          "id": "8",
+          "title": "Portable Speaker",
+          "price": 39.99,
+          "description": "Portable Bluetooth speaker with 12-hour battery life and waterproof design.",
+          "image": "https://images.pexels.com/photos/20267338/pexels-photo-20267338/free-photo-of-plane-on-airport.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "category": "Audio"
+        },
+        {
+          "id": "9",
+          "title": "Robot Vacuum Cleaner",
+          "price": 249.99,
+          "description": "Robot vacuum cleaner with smart navigation and powerful suction.",
+          "image": "https://images.pexels.com/photos/9789940/pexels-photo-9789940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Home Appliances"
+        },
+        {
+          "id": "10",
+          "title": "Digital Camera",
+          "price": 599.99,
+          "description": "Mirrorless digital camera with 24.2MP sensor and 4K video recording.",
+          "image": "https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "category": "Photography"
+        }
+      ]      
+}
